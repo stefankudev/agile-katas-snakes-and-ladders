@@ -1,8 +1,15 @@
-describe('index', () => {
-    test('some test for the game logic', () => {
-        expect(true).toBe(true);
+describe('game', () => {
+
+    test('player can win the game', () => {
+        // TODO:
+        expect(false).toBe(true);
     });
 
-    // TODO: write some game logic tests here
+    test('100 rolls should ensure player wins the game', () => {
+        // TODO:
+        expect(false).toBe(true);
+    });
+
+
 
 });
