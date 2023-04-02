@@ -12,14 +12,13 @@ describe('token', () => {
         expect(token.position).toBe(startingPosition);
     });
 
-    test('new token moved 3 spaces from position 1 is in position 4', () => {
+    test('token moved 3 spaces from position 1 is in position 4', () => {
         const token: Token = new Token();
         token.move(3);
         expect(token.position).toBe(4);
     });
 
     test('token moved 3 spaces, then 4 spaces, is in position 8', () => {
-
         const token: Token = new Token();
         const movement1 = 3;
         token.move(movement1);
@@ -28,7 +27,7 @@ describe('token', () => {
         expect(token.position).toBe(8);
     });
 
-    test('new token moved X spaces is in position 1+X', () => {
+    test('token moved X spaces is in position 1+X', () => {
         const randomMovement = Math.floor(Math.random() * 99) + 1;
         const token: Token = new Token();
         token.move(randomMovement);
