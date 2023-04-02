@@ -1,7 +1,4 @@
-import readline from 'readline';
 import { Game } from './game';
-import { Dice } from './dice';
-import { Token } from './token';
 
 describe('Game', () => {
     let game: Game;
@@ -10,20 +7,17 @@ describe('Game', () => {
         game = new Game();
     });
 
-    describe('startGameLoop', () => {
-        it('plays the game when the Enter key is pressed', async () => {
-            // hmm
-        });
+    afterEach(() => {
+        jest.restoreAllMocks();
     });
 
-
-    // describe('play', () => {
-    //     it('calls startGameLoop', () => {
-    //         jest.spyOn(game, 'startGameLoop').mockResolvedValueOnce(undefined);
-
-    //         game.play();
-
-    //         expect(game.startGameLoop).toHaveBeenCalled();
-    //     });
-    // });
+    describe('play', () => {
+        it('should exit the process when the token reaches position 100', async () => {
+            jest.spyOn(game['dice'], 'roll').mockImplementationOnce(() => 1);
+            jest.spyOn(game['token'], 'move').mockImplementationOnce(() => {
+                game['token']['move'](99);
+            });
+            // TODO: I want to spy on the rl output
+        });
+    });
 });
