@@ -20,9 +20,18 @@ describe('token', () => {
         expect(token.position).toBe(1);
     });
 
-    // new token moved 3 spaces is on position 4
+    test('token moved 3 spaces is on position 4', () => {
+        const token: Token = new Token();
+        token.move(3);
+        expect(token.position).toBe(4);
+    });
 
-    // new token moved 3 spaces, then 4 spaces, is in position 8
+    test('token moved 3 spaces, then 4 spaces, is on position 8', () => {
+        const token: Token = new Token();
+        token.move(3);
+        token.move(4);
+        expect(token.position).toBe(8);
+    });
 
     // new token moved X spaces is in position 1+X
 
