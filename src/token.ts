@@ -9,6 +9,10 @@ export class Token {
         return this._position;
     }
 
+    private set position(newPosition: number) {
+        this._position = newPosition;
+    }
+
     move(distance: number) {
         if (this._position + distance > 100) {
             return;
