@@ -4,5 +4,19 @@
   "main": "index.js",
   "repository": "https://github.com/stefankudev/agile-katas-snakes-and-ladders.git",
   "author": "Stefan Kudev <19394245+stefankudev@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "@types/node": "^18.15.11",
+    "jest": "^29.5.0",
+    "@jest/globals": "^29.5.0",
+    "ts-jest": "^29.0.5"
+  },
+  "devDependencies": {},
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  }
 }
