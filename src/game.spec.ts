@@ -1,15 +1,29 @@
-describe('game', () => {
+import readline from 'readline';
+import { Game } from './game';
+import { Dice } from './dice';
+import { Token } from './token';
 
-    test('player can win the game', () => {
-        // TODO:
-        expect(false).toBe(true);
+describe('Game', () => {
+    let game: Game;
+
+    beforeEach(() => {
+        game = new Game();
     });
 
-    test('100 rolls should ensure player wins the game', () => {
-        // TODO:
-        expect(false).toBe(true);
+    describe('startGameLoop', () => {
+        it('plays the game when the Enter key is pressed', async () => {
+            // hmm
+        });
     });
 
 
+    // describe('play', () => {
+    //     it('calls startGameLoop', () => {
+    //         jest.spyOn(game, 'startGameLoop').mockResolvedValueOnce(undefined);
 
+    //         game.play();
+
+    //         expect(game.startGameLoop).toHaveBeenCalled();
+    //     });
+    // });
 });
