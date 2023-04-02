@@ -11,7 +11,7 @@ describe('Game', () => {
         expect(game).toBeInstanceOf(Game);
     });
 
-    it('should have a dice and a token', () => {
+    it('should have dice and a token', () => {
         expect(game).toHaveProperty('dice');
         expect(game).toHaveProperty('token');
     });
