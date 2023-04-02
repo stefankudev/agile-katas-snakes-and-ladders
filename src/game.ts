@@ -1,27 +1,36 @@
-import { Dice } from './dice'
-import { Token } from './token'
+import { Dice } from './dice';
+import { Token } from './token';
 
-export function Game() {
-    const dice: Dice = new Dice();
-    const token: Token = new Token();
+export class Game {
+    private dice: Dice;
+    private token: Token;
 
-    console.info(`Welcome to 🐍🪜 Snakes and Ladders 🪜🐍`)
-
-    while (token.position < 100) {
-        console.info("Rolling the dice...")
-        const roll: number = dice.roll();
-        console.info(`You rolled ${roll}!`)
-        token.move(roll)
-        console.info(`You are now in position ${token.position} on the board.`)
+    constructor() {
+        this.dice = new Dice();
+        this.token = new Token();
+        console.info('\n───── Welcome to 🐍🪜 Snakes and Ladders 🪜🐍 ─────\n');
     }
 
-    if (token.position === 100) {
-        console.info("🎉 Congratulations! You win! 🎉")
-
-        console.info("Press Enter to start a new game, or Esc to exit.")
+    private getRollIcon(roll: number): string {
+        const icons = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+        return icons[roll - 1] || '';
     }
 
-    return;
+    play(): void {
+        while (this.token.position < 100) {
+            console.info('\n🎲 Rolling the dice...');
+            const roll: number = this.dice.roll();
+            console.info(`✨ You rolled ${this.getRollIcon(roll)} (${roll})!`);
+            this.token.move(roll);
+            console.info(`♟️ You are now in position ${this.token.position} on the board.\n`);
+        }
+
+        if (this.token.position === 100) {
+            console.info('\n🎉 Congratulations! You win! 🎉\nPress Enter to start a new game, or Esc to exit.\n');
+        }
+
+    }
 }
 
-Game();
+
+}
