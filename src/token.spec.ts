@@ -1,5 +1,24 @@
+class Token {
+    private _position: number;
+
+    constructor(position: number = 1) {
+        this._position = position;
+    }
+
+    get position(): number {
+        return this._position;
+    }
+
+    move(distance: number) {
+        this._position += distance;
+    }
+}
+
 describe('token', () => {
-    // new token starts at position 1
+    test('token starts at position 1', () => {
+        const token: Token = new Token();
+        expect(token.position).toBe(1);
+    });
 
     // new token moved 3 spaces is on position 4
 
