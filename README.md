@@ -1,1 +1,3 @@
-# agile-katas-snakes-and-ladders
+# 🐍🪜 Agile Katas - Snakes & Ladders
+
+TODO: Make a nice README
