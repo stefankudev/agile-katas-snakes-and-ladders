@@ -1,0 +1,8 @@
+{
+  "name": "agile-katas-snakes-and-ladders",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/stefankudev/agile-katas-snakes-and-ladders.git",
+  "author": "Stefan Kudev <19394245+stefankudev@users.noreply.github.com>",
+  "license": "MIT"
+}
