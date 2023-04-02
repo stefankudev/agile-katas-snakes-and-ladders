@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "target": "ES6",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "strict": true,
+        "rootDir": "src",
+        "outDir": "dist",
+    },
+    "include": [
+        "src/**/*.ts",
+        "tests/**/*.ts",
+    ],
+    "exclude": [
+        "node_modules",
+        ".vscode"
+    ],
+}
